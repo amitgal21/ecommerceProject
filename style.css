@@ -1,0 +1,339 @@
+/* עיצוב כללי */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+}
+/* Top Navigation */
+.top-navigation {
+    display: flex; /* שימוש ב-Flexbox */
+    justify-content: space-around; /* ריווח שווה בין הפריטים */
+    align-items: center; /* יישור אנכי */
+    background-color: #ff9100; /* צבע רקע כתום */
+    padding: 10px 15px; /* ריווח פנימי קטן */
+    border-radius: 15px; /* פינות מעוגלות */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* הצללה עדינה */
+    border: 2px solid #ff7000; /* מסגרת */
+    margin: 10px auto; /* ריווח מחוץ לניווט */
+    width: 90%; /* רוחב מותאם למכשירים קטנים */
+    max-width: 600px; /* רוחב מקסימלי */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* מעבר חלק */
+}
+
+/* List Style */
+.top-navigation ul {
+    list-style: none; /* הסרת עיגולים ברשימה */
+    margin: 0;
+    padding: 0;
+    display: flex; /* שימוש ב-Flexbox */
+    gap: 20px; /* רווח בין הפריטים */
+    align-items: center; /* ממרכז את התוכן */
+}
+
+/* List Items */
+.top-navigation li {
+    display: flex; /* סידור פריטים בשורה */
+    align-items: center; /* ממרכז את האייקון והטקסט */
+}
+
+/* Links */
+.top-navigation a {
+    text-decoration: none; /* הסרת קו תחתון */
+    color: black; /* צבע טקסט */
+    font-size: 14px; /* טקסט קטן יותר */
+    font-weight: 100;
+    padding: 10px 10px; /* ריווח פנימי בקישור */
+    transition: color 0.3s ease, background-color 0.3s ease; /* מעבר חלק */
+    border-radius: 10px; /* פינות מעוגלות */
+}
+
+.top-navigation a:hover {
+    background-color: #ff7000; /* רקע כתום כהה */
+    color: black; /* צבע טקסט שחור */
+}
+
+/* Cart Icon */
+.cart-icon {
+    width: 30px; /* גודל קטן יותר */
+    height: auto;
+}
+
+/* Hover Effect */
+.top-navigation:hover {
+    transform: scale(1.02); /* הגדלה קלה */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* הצללה חזקה יותר */
+}
+
+.hero {
+    position: relative;
+    height: 60vh; /* גובה מותאם */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ווידאו מכסה את כל החלק */
+    z-index: 1; /* ווידאו מתחת לטקסט */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2; /* הטקסט מעל הווידאו */
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* סידור אנכי */
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* גורם לטקסט לתפוס את גובה החלק */
+    padding: 10px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem; /* גודל מותאם */
+    margin: 0;
+    padding: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* הוספת הצללה */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    background-color: #ff9100;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.hero-text button:hover {
+    background-color: #e68100;
+}
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "navigation navigation navigation"
+        "sidebar content content"
+        "footer footer footer";
+    grid-template-rows: 120px 1fr 80px; /* שינינו את גובה השורה הראשונה ל-120px */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.navigation {
+    grid-area: navigation; /* מיקום ברשת */
+    background-color: #ff9100; /* צבע רקע */
+    display: flex; /* שימוש ב-Flexbox */
+    justify-content: space-around; /* ריווח שווה בין הקישורים */
+    align-items: center; /* יישור אנכי של האייקונים והטקסט */
+    padding: 15px 20px; /* ריווח פנימי אופקי ואנכי */
+    font-size: 20px; /* גודל טקסט */
+    height: 80px; /* גובה הניווט */
+    text-align: center; /* טקסט מיושר במרכז */
+    border-radius: 20px; /* פינות מעוגלות בינונית */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* הצללה עדינה */
+    border: 2px solid #ff7000; /* קו מסגרת דק */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* מעבר חלק */
+}
+
+/* אפקט בעת ריחוף */
+.navigation:hover {
+    transform: scale(1.05); /* הגדלה קלה */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* הצללה חזקה יותר */
+}
+
+.navigation a {
+    display: flex; /* הפיכת הקישור ל-Flexbox */
+    flex-direction: column; /* מיקום אנכי של האייקון והטקסט */
+    align-items: center; /* ממרכז את האייקון והטקסט */
+    text-decoration: none; /* מסיר קו תחתון */
+    color: white; /* צבע טקסט */
+    font-size: 14px; /* גודל טקסט */
+    gap: 5px; /* ריווח בין האייקון לטקסט */
+}
+
+.nav-icon {
+    width: 60px; /* רוחב האייקון */
+    height: 60px; /* גובה האייקון */
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #b4ff70;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+/* Content */
+.content {
+    grid-area: content;
+    background-color: #56c6ff;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #d0b8ff; 
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+
+/* התאמה למכשירים ניידים */
+@media (max-width: 768px) {
+    /* Grid Layout */
+    .grid-container {
+        grid-template-areas: 
+            "navigation"
+            "content"
+            "sidebar"
+            "footer";
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Navigation */
+    .navigation {
+        display: flex; /* שימוש ב-Flexbox */
+        flex-wrap: wrap; /* מאפשר עטיפה לשורות */
+        justify-content: space-around; /* ריווח שווה בין הפריטים */
+        align-items: center; /* ממרכז את האייקונים */
+        gap: 15px; /* ריווח בין הפריטים */
+        padding: 10px 15px; /* ריווח פנימי קטן יותר */
+        height: auto; /* גובה מותאם */
+        background-color: #ff9100; /* צבע רקע */
+        border-radius: 15px; /* פינות מעוגלות */
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); /* הצללה קלה */
+    }
+
+    .navigation a {
+        display: flex; /* יישור אייקון וטקסט */
+        flex-direction: column; /* סידור אנכי */
+        align-items: center; /* ממרכז את התוכן */
+        text-decoration: none; /* מסיר קו תחתון */
+        color: white; /* צבע טקסט */
+        font-size: 12px; /* טקסט קטן יותר */
+        gap: 8px; /* רווח בין האייקון לטקסט */
+        padding: 5px; /* ריווח פנימי */
+        transition: all 0.3s ease; /* מעבר רך */
+        border-radius: 10px; /* פינות מעוגלות */
+    }
+
+    .navigation a:hover {
+        background-color: #ff7000; /* רקע כהה יותר */
+        color: black; /* צבע טקסט שחור */
+    }
+
+    .nav-icon {
+        width: 35px; /* גודל אייקון מותאם */
+        height: 35px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        font-size: 14px; /* גודל טקסט קטן יותר */
+        padding: 10px; /* ריווח פנימי מותאם */
+    }
+
+    /* Content */
+    .content {
+        font-size: 14px; /* גודל טקסט קטן יותר */
+        padding: 10px; /* ריווח פנימי */
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 14px; /* גודל טקסט קטן יותר */
+        padding: 10px; /* ריווח פנימי */
+    }
+
+    .hero {
+        height: 50vh; /* גובה קטן יותר */
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem; /* כותרת קטנה יותר */
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-text button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    /* Top Navigation */
+    .top-navigation {
+        display: flex; /* שימוש ב-Flexbox */
+        flex-wrap: wrap; /* עטיפה לשורות */
+        justify-content: space-between; /* ריווח שווה */
+        align-items: center; /* ממרכז את התוכן */
+        padding: 8px 10px; /* ריווח קטן */
+        background-color: #ff9100; /* צבע רקע כתום */
+        border-radius: 15px; /* פינות מעוגלות */
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); /* הצללה קלה */
+        border: 1px solid #ff7000; /* מסגרת */
+    }
+
+    .top-navigation ul {
+        display: flex; /* שימוש ב-Flexbox */
+        flex-wrap: wrap; /* עטיפה לשורות */
+        justify-content: space-between; /* ריווח בין הפריטים */
+        align-items: center; /* יישור אנכי */
+        gap: 10px; /* רווח בין פריטים */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* ביטול עיצוב רשימה */
+    }
+
+    .top-navigation li {
+        display: flex; /* סידור בשורה */
+        align-items: center; /* ממרכז אנכית */
+        gap: 5px; /* רווח בין אייקון לטקסט */
+    }
+
+    .top-navigation a {
+        text-decoration: none; /* ביטול קו תחתון */
+        color: black; /* צבע טקסט */
+        font-size: 12px; /* גודל טקסט קטן */
+        padding: 5px; /* ריווח פנימי */
+        transition: all 0.3s ease; /* מעבר חלק */
+        border-radius: 8px; /* פינות מעוגלות */
+    }
+
+    .top-navigation a:hover {
+        background-color: #ff7000; /* רקע כתום כהה */
+        color: black; /* צבע טקסט */
+    }
+
+    .cart-icon {
+        width: 25px; /* גודל קטן יותר */
+        height: auto;
+    }
+}
+

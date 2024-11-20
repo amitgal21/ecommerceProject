@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Hero Section</title>
 </head>
 <body>
-    dfsfs
+    <!-- Navigation Bar -->
+    <nav class="top-navigation">
+        <ul>
+            <li><a href="#hero">Home Page</a></li>
+            <li><a href="#Our Shop">Our Shop</a></li>
+            <li><a href="#About Us">About Us</a></li>
+            <li><a href="#Contact Us">Contact Us</a></li>
+            <li><img src="./images/cart.png" alt="cart-icon"></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <video autoplay controls loop class="hero-video">
+            <source src="videos/hero-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-text">
+            <h1>Welcome to Anime Haven</h1>
+            <p>Anime Dreams Start Here!</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <!-- Grid Layout -->
+    <div id="products" class="grid-container">
+        <nav class="navigation">
+            <a href="/index.html">
+                <img src="icons/naruto-icon.ico" alt="Naruto" class="nav-icon">
+                Naruto
+            </a>
+
+            <a href="/index.html">
+                <img src="icons/OnePiece-icon.ico" alt="One-Piece" class="nav-icon">
+                One Piece
+            </a>
+            <a href="/index.html">
+                <img src="icons/dragonball.png" alt="Dragon-Ball" class="nav-icon">
+                Dragon Ball
+            </a>
+            <a href="/index.html">
+                <img src="icons/jujutsu.png" alt="Jujutsu-Kaisen" class="nav-icon">
+                Jujutsu-Kaisen
+            </a>
+        </nav>
+        <aside class="sidebar">SIDEBAR</aside>
+        <main class="content">CONTENT</main>
+        <footer class="footer">FOOTER</footer>
+    </div>
 </body>
 </html>
