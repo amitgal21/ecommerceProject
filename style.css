@@ -131,11 +131,14 @@ body {
         "navigation navigation navigation"
         "sidebar content content"
         "footer footer footer";
-    grid-template-rows: 120px 1fr 80px; /* שינינו את גובה השורה הראשונה ל-120px */
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 10px;
-    padding: 10px;
+    grid-template-rows: 120px 1fr auto; /* גובה אוטומטי לפוטר */
+    grid-template-columns: 1fr 3fr; /* יחס בין sidebar ל-content */
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh; /* גובה מינימלי לכל ה-grid */
+    box-sizing: border-box; /* כולל את הריווח בתוך החישוב */
 }
+
 
 .navigation {
     grid-area: navigation; /* מיקום ברשת */
@@ -177,33 +180,271 @@ body {
 /* Sidebar */
 .sidebar {
     grid-area: sidebar;
-    background-color: #b4ff70;
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
+    background-color: #fff5e6; /* רקע מתאים */
+    text-align: left; /* יישור טקסט לשמאל */
+    padding: 20px; /* ריווח פנימי */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה עדינה */
+    font-size: 16px; /* טקסט קריא */
+    line-height: 1.6; /* ריווח בין שורות */
 }
-
+.shipping-info {
+    margin-top: 20px; /* מוסיף מרווח חיצוני עליון */
+    padding-top: 10px; /* מוסיף ריווח פנימי עליון */
+}
 /* Content */
 .content {
     grid-area: content;
-    background-color: #56c6ff;
+    background-color: #fff5e6;
+    padding: 30px; /* ריווח פנימי גדול יותר */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה */
+    text-align: center; /* טקסט במרכז */
+    font-size: 18px; /* טקסט גדול יותר */
+    line-height: 1.8; /* ריווח בין שורות */
+}
+.content h1
+{
+    font-size: 4.5rem; /* גודל מותאם */
+    margin: 0;
+    padding: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* הוספת הצללה */
+}
+.shipping-info > p
+{
+    font-size: 24px;
+}
+/* Table Container */
+.shipping-info {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+    border: 2px solid #ff9100;
+    border-radius: 10px;
+    background-color: #fff5e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
-    font-size: 18px;
 }
 
-/* Footer */
+/* Table Style */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Header Row */
+.styled-table thead tr {
+    background-color: #ff9100;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Table Cells */
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Odd Rows */
+.styled-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Even Rows */
+.styled-table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Hover Effect */
+.styled-table tbody tr:hover {
+    background-color: #ffe6cc;
+}
+
+/* Products Section */
+.products {
+    display: grid; /* משתמשים ב-CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* יוצר עמודות דינמיות */
+    gap: 20px; /* מרווח בין המוצרים */
+    padding: 20px;
+}
+
+.product {
+    background-color: rgba(230, 129, 0, 0.2);
+    border: 5px solid #e68100;
+    border-radius: 10px; /* פינות מעוגלות */
+    padding: 15px;
+    text-align: center; /* טקסט מיושר למרכז */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* אפקט מעבר */
+    min-height: 300px; /* גובה מינימלי למוצרים */
+    display: flex; /* עוזר במרכז הטקסט */
+    flex-direction: column; /* טקסט מסודר אנכית */
+    justify-content: space-between; /* מרווח שווה בין האלמנטים */
+}
+
+.product img {
+    max-width: 100%; /* תמונות מותאמות לגודל המיכל */
+    height: auto; /* יחס תמונה נשמר */
+    margin-bottom: 10px; /* רווח מתחת לתמונה */
+    border-radius: 5px; /* פינות מעוגלות לתמונה */
+}
+
+/* עיצוב הכותרת */
+.product h3 {
+    font-family: 'Roboto', sans-serif; /* פונט לכותרת */
+    font-size: 1.5rem; /* גודל כותרת */
+    font-weight: 700; /* כותרת מודגשת */
+    color: #333;
+    margin: 10px 0; /* ריווח עליון ותחתון */
+}
+/* עיצוב המחיר */
+.price {
+    font-size: 1rem; /* גודל טקסט כללי למחיר */
+    margin-top: 10px; /* מרווח בין המחיר לטקסט הקודם */
+    display: flex; /* עיצוב פלואידי */
+    justify-content: center;
+    gap: 10px; /* מרווח בין המחירים */
+    align-items: center;
+}
+/* מחיר רגיל */
+.original-price {
+    text-decoration: line-through; /* קו באמצע */
+    color: #999; /* צבע אפור */
+    font-size: 0.9rem; /* טקסט קטן */
+}
+.discount-price {
+    color: #e60000; /* צבע אדום */
+    font-weight: bold; /* טקסט מודגש */
+    font-size: 1.2rem; /* גודל טקסט גדול יותר */
+}
+img[alt="sale-image"] {
+    width: 60px; /* לדוגמה, לשינוי רוחב */
+    height: auto; /* לשמירה על פרופורציה */
+    display: inline-block; /* יישור נכון עם הטקסט */
+    margin-left: 10px; /* רווח מהטקסט */
+}
+
+.product p {
+    font-size: 1rem; /* גודל טקסט */
+    color: #666;
+}
+
+/* אפקט ריחוף */
+.product:hover {
+    transform: scale(1.05); /* הגדלה קלה */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הצללה */
+}
+/* Footer עיצוב */
 .footer {
     grid-area: footer;
-    background-color: #d0b8ff; 
+    background-color: #ff9100; /* צבע רקע */
+    color: white; /* טקסט לבן */
     text-align: center;
-    padding: 15px;
-    font-size: 20px;
+    padding: 60px 20px; /* הגדלת ריווח פנימי */
+    font-size: 16px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* הצללה קלה */
+    height: auto; /* גובה דינמי */
+    overflow: visible; /* וודא שאין חיתוך של תוכן */
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* התאמה למובייל */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footer-section {
+    flex: 1 1 calc(33.333% - 20px); /* 3 עמודות עם רווח */
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid white; /* קו תחתון */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.8; /* ריווח בין השורות */
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffe6cc; /* צבע לבן יותר בהיר */
+}
+.social-icons {
+    margin-top: 20px; /* רווח מעל השורה */
+    display: flex; /* מציג את האייקונים בשורה */
+    justify-content: center; /* מיושר למרכז */
+    gap: 20px; /* רווח בין האייקונים */
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* גודל האייקונים */
+    height: 40px;
+    transition: transform 0.3s ease; /* אפקט על hover */
+}
+
+.social-icons img {
+    width: 100%; /* התאמת התמונה למיכל */
+    height: auto; /* שמירת יחס תמונה */
+    border-radius: 50%; /* צורת עיגול */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הצללה */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* אפקט הגדלה קל על ריחוף */
+}
+
+/* עיצוב טקסט בתחתית הפוטר */
+.footer-bottom {
+    margin-top: 20px; /* רווח עליון */
+    text-align: center; /* מיושר למרכז */
+    font-size: 14px; /* גודל טקסט קטן */
+    color: #fff; /* צבע לבן */
+    background-color: #ff9100; /* צבע רקע כתום */
+    padding: 10px 0; /* ריווח פנימי */
+    border-top: 2px solid #ff7000; /* קו גבול עליון */
+}
+
+.footer-bottom p {
+    margin: 0; /* ביטול מרווחים */
+    font-weight: bold; /* טקסט מודגש */
+    font-family: 'Roboto', sans-serif; /* פונט התואם לאתר */
+}
+
+
 
 /* התאמה למכשירים ניידים */
 @media (max-width: 768px) {
-    /* Grid Layout */
+    /* Layout כללי */
     .grid-container {
         grid-template-areas: 
             "navigation"
@@ -217,123 +458,130 @@ body {
 
     /* Navigation */
     .navigation {
-        display: flex; /* שימוש ב-Flexbox */
-        flex-wrap: wrap; /* מאפשר עטיפה לשורות */
-        justify-content: space-around; /* ריווח שווה בין הפריטים */
-        align-items: center; /* ממרכז את האייקונים */
-        gap: 15px; /* ריווח בין הפריטים */
-        padding: 10px 15px; /* ריווח פנימי קטן יותר */
-        height: auto; /* גובה מותאם */
-        background-color: #ff9100; /* צבע רקע */
-        border-radius: 15px; /* פינות מעוגלות */
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); /* הצללה קלה */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 15px;
+        height: auto;
+        background-color: #ff9100;
+        border-radius: 15px;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
     }
 
     .navigation a {
-        display: flex; /* יישור אייקון וטקסט */
-        flex-direction: column; /* סידור אנכי */
-        align-items: center; /* ממרכז את התוכן */
-        text-decoration: none; /* מסיר קו תחתון */
-        color: white; /* צבע טקסט */
-        font-size: 12px; /* טקסט קטן יותר */
-        gap: 8px; /* רווח בין האייקון לטקסט */
-        padding: 5px; /* ריווח פנימי */
-        transition: all 0.3s ease; /* מעבר רך */
-        border-radius: 10px; /* פינות מעוגלות */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        gap: 8px;
+        padding: 5px;
+        transition: all 0.3s ease;
+        border-radius: 10px;
     }
 
     .navigation a:hover {
-        background-color: #ff7000; /* רקע כהה יותר */
-        color: black; /* צבע טקסט שחור */
+        background-color: #ff7000;
+        color: black;
     }
 
     .nav-icon {
-        width: 35px; /* גודל אייקון מותאם */
+        width: 35px;
         height: 35px;
     }
 
     /* Sidebar */
     .sidebar {
-        font-size: 14px; /* גודל טקסט קטן יותר */
-        padding: 10px; /* ריווח פנימי מותאם */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* התאמה של shipping-info */
+    .shipping-info {
+        margin-top: 20px;
+        padding: 10px;
+        text-align: center;
     }
 
     /* Content */
     .content {
-        font-size: 14px; /* גודל טקסט קטן יותר */
-        padding: 10px; /* ריווח פנימי */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* כותרת ראשית ב-content */
+    .content h1 {
+        font-size: 2rem; /* גודל כותרת קטן יותר למובייל */
+        margin-bottom: 15px;
+        text-align: center;
     }
 
     /* Footer */
     .footer {
-        font-size: 14px; /* גודל טקסט קטן יותר */
-        padding: 10px; /* ריווח פנימי */
+        font-size: 14px;
+        padding: 10px;
     }
 
-    .hero {
-        height: 50vh; /* גובה קטן יותר */
+    /* התאמה למוצרים */
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        padding: 10px;
     }
 
-    .hero-text h1 {
-        font-size: 1.8rem; /* כותרת קטנה יותר */
+    .product {
+        min-height: 250px;
+        padding: 10px;
     }
 
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    .hero-text button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    /* Top Navigation */
-    .top-navigation {
-        display: flex; /* שימוש ב-Flexbox */
-        flex-wrap: wrap; /* עטיפה לשורות */
-        justify-content: space-between; /* ריווח שווה */
-        align-items: center; /* ממרכז את התוכן */
-        padding: 8px 10px; /* ריווח קטן */
-        background-color: #ff9100; /* צבע רקע כתום */
-        border-radius: 15px; /* פינות מעוגלות */
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); /* הצללה קלה */
-        border: 1px solid #ff7000; /* מסגרת */
-    }
-
-    .top-navigation ul {
-        display: flex; /* שימוש ב-Flexbox */
-        flex-wrap: wrap; /* עטיפה לשורות */
-        justify-content: space-between; /* ריווח בין הפריטים */
-        align-items: center; /* יישור אנכי */
-        gap: 10px; /* רווח בין פריטים */
-        padding: 0;
-        margin: 0;
-        list-style: none; /* ביטול עיצוב רשימה */
-    }
-
-    .top-navigation li {
-        display: flex; /* סידור בשורה */
-        align-items: center; /* ממרכז אנכית */
-        gap: 5px; /* רווח בין אייקון לטקסט */
-    }
-
-    .top-navigation a {
-        text-decoration: none; /* ביטול קו תחתון */
-        color: black; /* צבע טקסט */
-        font-size: 12px; /* גודל טקסט קטן */
-        padding: 5px; /* ריווח פנימי */
-        transition: all 0.3s ease; /* מעבר חלק */
-        border-radius: 8px; /* פינות מעוגלות */
-    }
-
-    .top-navigation a:hover {
-        background-color: #ff7000; /* רקע כתום כהה */
-        color: black; /* צבע טקסט */
-    }
-
-    .cart-icon {
-        width: 25px; /* גודל קטן יותר */
+    .product img {
+        max-width: 100%;
         height: auto;
+        border-radius: 5px;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .product p {
+        font-size: 0.9rem;
+    }
+    .footer {
+        padding: 40px 10px; /* ריווח פנימי קטן יותר במובייל */
+        font-size: 14px; /* טקסט קטן יותר */
+        text-align: center; /* מיושר למרכז */
+        height: auto; /* גובה מותאם לתוכן */
+    }
+
+    .grid-container {
+        grid-template-areas: 
+            "navigation"
+            "content"
+            "sidebar"
+            "footer"; /* הפוטר תמיד למטה */
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        gap: 15px; /* ריווח קטן יותר */
+        padding: 10px; /* ריווח פנימי קטן */
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+        flex: 1 1 100%;
+    }
+
+    .footer {
+        padding: 50px 20px; /* ריווח גדול יותר במובייל */
     }
 }
 
