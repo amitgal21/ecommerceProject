@@ -275,23 +275,29 @@ body {
 }
 
 .product {
-    background-color: rgba(230, 129, 0, 0.2);
-    border: 5px solid #e68100;
+    text-decoration: none; /* ביטול קו תחתון */
+    color: inherit; /* שמירה על הצבעים הקיימים */
+    display: flex; /* שומר על סידור הפריטים */
+    flex-direction: column; /* מסדר אנכית */
+    justify-content: space-between; /* ריווח שווה בין התוכן */
+    background-color: rgba(230, 129, 0, 0.2); /* צבע רקע */
+    border: 5px solid #e68100; /* מסגרת */
     border-radius: 10px; /* פינות מעוגלות */
     padding: 15px;
-    text-align: center; /* טקסט מיושר למרכז */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* אפקט מעבר */
-    min-height: 300px; /* גובה מינימלי למוצרים */
-    display: flex; /* עוזר במרכז הטקסט */
-    flex-direction: column; /* טקסט מסודר אנכית */
-    justify-content: space-between; /* מרווח שווה בין האלמנטים */
+    text-align: center; /* מיקום טקסט */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* אנימציה */
+    min-height: 300px; /* גובה מינימלי */
+}
+.product:hover {
+    transform: scale(1.05); /* הגדלה */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הצללה */
 }
 
 .product img {
-    max-width: 100%; /* תמונות מותאמות לגודל המיכל */
-    height: auto; /* יחס תמונה נשמר */
-    margin-bottom: 10px; /* רווח מתחת לתמונה */
-    border-radius: 5px; /* פינות מעוגלות לתמונה */
+    max-width: 100%; /* תמונה מותאמת למיכל */
+    height: auto; /* יחס תמונה */
+    margin-bottom: 10px;
+    border-radius: 5px; /* פינות מעוגלות */
 }
 
 /* עיצוב הכותרת */
@@ -584,4 +590,3 @@ img[alt="sale-image"] {
         padding: 50px 20px; /* ריווח גדול יותר במובייל */
     }
 }
-
