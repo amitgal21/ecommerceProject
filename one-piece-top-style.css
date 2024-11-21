@@ -322,10 +322,14 @@ body {
         flex-direction: column;
         padding: 0 10px;
         text-align: center;
+        position: relative; /* מאפשר למקם את ה-contact box */
     }
 
     .contact-box {
-        max-width: 100%;
+        position: static; /* הופך את המיקום לסטטי כך שיזרום בתוך הטקסט */
+        margin: 20px auto; /* ממקם אותו במרכז */
+        max-width: 90%; /* מתאים לרוחב מסך קטן */
+        width: auto; /* מתאים את הרוחב אוטומטית */
     }
 
     .product-info h1 {

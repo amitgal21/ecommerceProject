@@ -322,10 +322,16 @@ body {
         flex-direction: column;
         padding: 0 10px;
         text-align: center;
+        position: relative; /* מאפשר מיקום יחסי */
     }
 
     .contact-box {
-        max-width: 100%;
+        position: static; /* מיקום סטטי */
+        margin: 20px auto; /* מרכז את התיבה במובייל */
+        max-width: 90%; /* מגביל רוחב */
+        width: auto; /* מתאים את הרוחב אוטומטית */
+        padding: 15px; /* ריווח פנימי נוסף */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* הצללה עדינה */
     }
 
     .product-info h1 {
@@ -336,8 +342,9 @@ body {
         font-size: 1.5rem;
     }
 
-    .add-to-cart, .buy-now {
-        width: 100%;
+    .add-to-cart,
+    .buy-now {
+        width: 100%; /* מתאים את הכפתורים לרוחב המסך */
     }
 
     .footer-container {

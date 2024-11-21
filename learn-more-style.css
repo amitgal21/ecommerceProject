@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5e6;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+}
+
+/* Navigation Bar */
+.top-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff9100;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.top-navigation li {
+    display: flex;
+    align-items: center;
+}
+
+.top-navigation a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.top-navigation a:hover {
+    color: #ffffff;
+}
+
+.top-navigation img {
+    height: 30px;
+    width: auto;
+}
+
+/* Main Content */
+.learn-more-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.content-section img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.content-text {
+    flex: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #ff9100;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ffe6cc;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content-section img {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* סדר את התמונה והטקסט אנכית */
+        align-items: center;
+        text-align: center;
+        gap: 20px; /* רווח בין התמונה לטקסט */
+    }
+
+    .content-section img {
+        width: 100%; /* התאמת התמונה לגודל המסך */
+        max-width: 300px;
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column; /* כל החלקים יופיעו אחד מתחת לשני */
+        text-align: center;
+        gap: 15px; /* רווח בין החלקים */
+    }
+
+    .footer-section {
+        flex: 1 1 100%; /* כל חלק תופס את כל רוחב המסך */
+        margin-bottom: 15px; /* רווח מתחת לכל חלק */
+    }
+
+    .social-icons {
+        flex-wrap: wrap; /* הסידור של האייקונים בהתאם למקום */
+        justify-content: center;
+    }
+
+    .social-icons img {
+        width: 35px; /* התאמת גודל האייקונים */
+        height: 35px;
+        margin-bottom: 10px; /* רווח מתחת לכל אייקון */
+    }
+}
