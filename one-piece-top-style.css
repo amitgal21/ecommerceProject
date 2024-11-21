@@ -135,8 +135,8 @@ body {
 
 .contact-box {
     position: absolute;
-    top: 250px;
-    right: -200px;
+    top: 400px; /* העלאת הערך מורידה את התיבה למטה */
+    right: -50px; /* העלאת הערך מזיזה את התיבה ימינה */
     border: 2px solid #ff9100; /* מסגרת כתומה */
     border-radius: 10px; /* פינות מעוגלות */
     padding: 20px; /* ריווח פנימי גדול יותר */
