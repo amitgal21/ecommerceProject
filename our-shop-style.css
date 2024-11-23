@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5e6;
+}
+
+/* Top Navigation */
+.top-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff9100;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.top-navigation li {
+    display: flex;
+    align-items: center;
+}
+
+.top-navigation a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.top-navigation img {
+    height: 30px;
+    width: auto;
+}
+
+/* Shop Section */
+.shop-main {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* שינינו את המינימום ל-300px */
+    gap: 25px; /* ריווח גדול יותר */
+    margin-top: 20px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px; /* הגדלנו את הריווח הפנימי */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* הגדלנו את הגובה */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px; /* הגדלנו את הריווח */
+}
+
+.product-card h3 {
+    font-size: 20px; /* טקסט גדול יותר */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 18px; /* טקסט גדול יותר */
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #ff9100;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* כפתור גדול יותר */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* טקסט גדול יותר בכפתור */
+    transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #e68100;
+}
+
+/* Footer */
+.footer {
+    background-color: #ff9100;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffe6cc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-main {
+        padding: 10px;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
