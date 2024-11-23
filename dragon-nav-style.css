@@ -1,4 +1,4 @@
-/* General Styles */
+/* ################## General Styles ################### */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     background-color: #fff5e6;
 }
 
-/* Top Navigation */
+/* ################## Top Navigation ################### */
 .top-navigation {
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@ body {
     width: auto;
 }
 
-/* Main Content */
+/* ################## Main Content ################### */
 .main-content {
     max-width: 1200px;
     margin: 20px auto;
@@ -70,7 +70,7 @@ body {
     text-align: justify;
 }
 
-/* Image Gallery */
+/* ################## Image Gallery ################### */
 .dragon-ball-images .image-gallery {
     display: flex;
     gap: 15px;
@@ -91,7 +91,7 @@ body {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* Watch Link */
+/* ################## Watch Link ################### */
 .watch-link {
     margin-top: 20px;
 }
@@ -119,7 +119,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Footer */
+/* ################## Footer ################### */
 .footer {
     background-color: #ff9100;
     color: white;
@@ -194,15 +194,15 @@ body {
     padding-top: 10px;
 }
 
-/* Mobile Styles */
+/* ################## Mobile Styles ################### */
 @media (max-width: 768px) {
     .dragon-ball-images .image-gallery {
         flex-direction: column;
-        align-items: center; /* מרכז את התמונות */
+        align-items: center;
     }
 
     .dragon-ball-images img {
-        margin-bottom: 15px; /* מוסיף מרווח בין התמונות */
+        margin-bottom: 15px;
     }
 
     .footer-container {

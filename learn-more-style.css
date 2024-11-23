@@ -1,4 +1,4 @@
-/* General Styles */
+/* ################## General Styles ################### */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ h2 {
     margin: 0 0 15px 0;
 }
 
-/* Navigation Bar */
+/* ################## Top Navigation ################### */
 .top-navigation {
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@ h2 {
     width: auto;
 }
 
-/* Main Content */
+/* ################## Main Content ################### */
 .learn-more-content {
     max-width: 1200px;
     margin: 30px auto;
@@ -80,7 +80,7 @@ h2 {
     flex: 1;
 }
 
-/* Footer */
+/* ################## Footer ################### */
 .footer {
     background-color: #ff9100;
     color: white;
@@ -128,7 +128,7 @@ h2 {
     color: #ffe6cc;
 }
 
-/* Social Icons Styling */
+/* ################## Social Icons ################### */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -149,7 +149,7 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer Bottom */
+/* ################## Footer Bottom ################### */
 .footer-bottom {
     margin-top: 10px;
     font-size: 12px;
@@ -158,21 +158,25 @@ h2 {
     padding-top: 10px;
 }
 
-/* Mobile Styles */
+/* ################## Mobile Styles ################### */
 @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 20px;
     }
 
     .content-section img {
         width: 100%;
+        max-width: 300px;
+        height: auto;
     }
 
     .footer-container {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
     }
 
     .footer-section {
@@ -182,43 +186,12 @@ h2 {
 
     .social-icons {
         flex-wrap: wrap;
-    }
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .content-section {
-        flex-direction: column; /* סדר את התמונה והטקסט אנכית */
-        align-items: center;
-        text-align: center;
-        gap: 20px; /* רווח בין התמונה לטקסט */
-    }
-
-    .content-section img {
-        width: 100%; /* התאמת התמונה לגודל המסך */
-        max-width: 300px;
-        height: auto;
-    }
-
-    .footer-container {
-        flex-direction: column; /* כל החלקים יופיעו אחד מתחת לשני */
-        text-align: center;
-        gap: 15px; /* רווח בין החלקים */
-    }
-
-    .footer-section {
-        flex: 1 1 100%; /* כל חלק תופס את כל רוחב המסך */
-        margin-bottom: 15px; /* רווח מתחת לכל חלק */
-    }
-
-    .social-icons {
-        flex-wrap: wrap; /* הסידור של האייקונים בהתאם למקום */
         justify-content: center;
     }
 
     .social-icons img {
-        width: 35px; /* התאמת גודל האייקונים */
+        width: 35px;
         height: 35px;
-        margin-bottom: 10px; /* רווח מתחת לכל אייקון */
+        margin-bottom: 10px;
     }
 }

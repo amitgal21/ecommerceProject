@@ -1,4 +1,4 @@
-/* General Styles */
+/* ################## General Styles ################### */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Top Navigation */
+/* ################## Top Navigation ################### */
 .top-navigation {
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@ body {
     width: auto;
 }
 
-/* Contact Us Section */
+/* ################## Contact Us Section ################### */
 .contact-us-section {
     max-width: 800px;
     margin: 30px auto;
@@ -107,7 +107,7 @@ body {
     background-color: #e68100;
 }
 
-/* Footer */
+/* ################## Footer ################### */
 .footer {
     background-color: #ff9100;
     color: white;
@@ -177,9 +177,10 @@ body {
     font-size: 0.9rem;
     color: #fff;
 }
-/* התאמה למובייל */
+
+/* ################## Mobile Adjustments ################### */
 @media (max-width: 768px) {
-    /* Top Navigation */
+    /* ################## Top Navigation ################### */
     .top-navigation {
         flex-direction: column;
         align-items: center;
@@ -195,11 +196,11 @@ body {
         font-size: 16px;
     }
 
-    /* Contact Us Section */
+    /* ################## Contact Us Section ################### */
     .contact-us-section {
         padding: 15px;
         margin: 20px auto;
-        width: 90%; /* צר יותר כדי להתאים למסכים קטנים */
+        width: 90%; 
     }
 
     .contact-us-section h1 {
@@ -225,7 +226,7 @@ body {
         font-size: 1rem;
     }
 
-    /* Footer */
+    /* ################## Footer ################### */
     .footer-container {
         flex-direction: column;
         align-items: center;

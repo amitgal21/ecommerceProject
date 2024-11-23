@@ -1,4 +1,4 @@
-/* General Styles */
+/* ################## General Styles ################### */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     color: #333;
 }
 
-/* Top Navigation */
+/* ################## Top Navigation ################### */
 .top-navigation {
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@ body {
     width: auto;
 }
 
-/* About Us Section */
+/* ################## About Us Section ################### */
 .about-us {
     max-width: 1200px;
     margin: 20px auto;
@@ -69,11 +69,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* Policies Section */
+/* ################## Policies Section ################### */
 .policies {
-    max-width: 1100px; /* הגבלה על רוחב החלק */
-    margin: 20px auto; /* שמירה על שוליים אוטומטיים */
-    padding: 0 20px; /* הקטנת הריווח הפנימי מימין ומשמאל */
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -83,29 +83,31 @@ body {
     text-align: center;
     margin-bottom: 30px;
 }
+
 .policy {
-    margin: 20px auto; /* ריווח בין הפוליסות */
-    padding: 15px; /* ריווח פנימי בתוך הפוליסות */
-    background-color: #fff5e6; /* צבע רקע רך */
-    border: 2px solid #ff9100; /* מסגרת כתומה */
-    border-radius: 10px; /* פינות מעוגלות */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה */
-    text-align: left; /* יישור טקסט לשמאל */
-    max-width: 800px; /* הגבלת רוחב הפוליסות */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff5e6;
+    border: 2px solid #ff9100;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 800px;
 }
 
 .policy h3 {
-    margin-bottom: 10px; /* ריווח בין הכותרת לטקסט */
-    font-size: 1.5rem; /* גודל כותרת */
-    color: #ff7000; /* צבע כותרת */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #ff7000;
 }
 
 .policy p {
-    font-size: 1rem; /* גודל טקסט */
-    line-height: 1.8; /* גובה שורה לקריאות */
-    color: #333; /* צבע טקסט */
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
 }
-/* Footer */
+
+/* ################## Footer ################### */
 .footer {
     background-color: #ff9100;
     color: white;
@@ -191,9 +193,8 @@ body {
     border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-/* התאמה למובייל */
+/* ################## Mobile Adjustments ################### */
 @media (max-width: 768px) {
-    /* Top Navigation */
     .top-navigation {
         flex-direction: column;
         padding: 10px;
@@ -204,7 +205,6 @@ body {
         gap: 10px;
     }
 
-    /* About Us Section */
     .about-us {
         padding: 15px;
         margin: 10px;
@@ -218,7 +218,6 @@ body {
         font-size: 1rem;
     }
 
-    /* Policies Section */
     .policies h2 {
         font-size: 1.8rem;
     }
@@ -235,16 +234,17 @@ body {
     .policy p {
         font-size: 0.9rem;
     }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .footer-section {
         text-align: center;
         flex: 1 1 100%;
     }
-    
+
     .social-icons {
         flex-wrap: wrap;
     }
