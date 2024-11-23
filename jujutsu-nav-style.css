@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5e6;
+}
+
+/* Top Navigation */
+.top-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff9100;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.top-navigation li {
+    display: flex;
+    align-items: center;
+}
+
+.top-navigation a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.top-navigation img {
+    height: 30px;
+    width: auto;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    color: #ff7000;
+    margin-bottom: 20px;
+}
+
+.jujutsu-kaisen-description p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Image Gallery */
+.jujutsu-kaisen-images .image-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.jujutsu-kaisen-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jujutsu-kaisen-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Watch Link */
+.watch-link {
+    margin-top: 20px;
+}
+
+.watch-link h2 {
+    font-size: 1.8rem;
+    color: #ff7000;
+    margin-bottom: 10px;
+}
+
+.watch-link a {
+    display: inline-block;
+    background-color: #ff7000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.watch-link a:hover {
+    background-color: #e68100;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #ff9100;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffe6cc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .jujutsu-kaisen-images .image-gallery {
+        flex-direction: column;
+        align-items: center; /* מרכז את התמונות */
+    }
+
+    .jujutsu-kaisen-images img {
+        margin-bottom: 15px; /* ריווח בין התמונות */
+    }
+
+    .footer-container {
+        flex-direction: column; /* מסדר את התכנים בטור */
+        align-items: center; /* מרכז את כל התוכן */
+        text-align: center; /* מרכז את הטקסט */
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+        text-align: center; /* מרכז את הטקסט בכל מקטע */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .watch-link a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
